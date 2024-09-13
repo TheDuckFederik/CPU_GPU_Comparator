@@ -88,6 +88,7 @@ public class Prueba extends Main {
             WebElement proceed = driver.findElement(By.xpath("(//button[@class='btn btn-primary btn-block mt-md-3 mt-2'])[1]"));
             proceed.click();
             Thread.sleep(3000);
+            //
         } catch(Exception e){
             e.printStackTrace();
         } finally{
