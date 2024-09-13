@@ -2,6 +2,8 @@
 package web;
 //
 import java.io.IOException;
+import java.security.Key;
+
 // import java.time.LocalDate;
 import org.openqa.selenium.By;
 // import org.openqa.selenium.JavascriptExecutor;
@@ -15,6 +17,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
+import org.openqa.selenium.Keys;
 //
 public class Prueba extends Main {
     //
@@ -45,6 +48,12 @@ public class Prueba extends Main {
             WebElement cpu = driver.findElement(By.xpath("//*[@id=\'card_cpu\']/div/div[2]/div[2]/span/span[1]/span/span[2]"));
             cpu.click();
             Thread.sleep(500);
+            WebElement type_cpu = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
+            type_cpu.sendKeys("7800X3d");
+            Thread.sleep(500);
+            WebElement select_cpu = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
+            select_cpu.sendKeys(Keys.ENTER);
+            Thread.sleep(2000);
             //
         } catch(Exception e){
             e.printStackTrace();
