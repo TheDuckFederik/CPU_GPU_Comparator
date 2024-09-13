@@ -1,15 +1,15 @@
 //
 package web;
 //
-import java.io.IOException;
-import java.security.Key;
+// import java.security.Key;
 // import java.time.LocalDate;
-import org.openqa.selenium.By;
 // import org.openqa.selenium.JavascriptExecutor;
+// import org.testng.Assert;
+import java.io.IOException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-// import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,6 +44,7 @@ public class Prueba extends Main {
             wait.until(ExpectedConditions.elementToBeClickable(cookies_accept)).click();
             wait.until(ExpectedConditions.invisibilityOfElementLocated(cookies_accept));
             Thread.sleep(500);
+            //
             WebElement cpu = driver.findElement(By.xpath("//*[@id=\'card_cpu\']/div/div[2]/div[2]/span/span[1]/span/span[2]"));
             cpu.click();
             Thread.sleep(500);
@@ -52,7 +53,27 @@ public class Prueba extends Main {
             Thread.sleep(500);
             WebElement select_cpu = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
             select_cpu.sendKeys(Keys.ENTER);
+            Thread.sleep(500);
+            //
+            WebElement gpu = driver.findElement(By.xpath("//*[@id=\"card_gpu\"]/div/div[1]/div[2]/span/span[1]/span/span[2]"));
+            gpu.click();
+            Thread.sleep(500);
+            WebElement type_gpu = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
+            type_gpu.sendKeys("7800 XT");
+            Thread.sleep(500);
+            WebElement select_gpu = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
+            select_gpu.sendKeys(Keys.ENTER);
+            Thread.sleep(500);
+            //
+            WebElement game = driver.findElement(By.xpath("(//div[@class='card-body py-3'])[4]"));
+            game.click();
             Thread.sleep(2000);
+            WebElement type_game = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
+            type_game.sendKeys("Batman Arkham Knight");
+            Thread.sleep(500);
+            WebElement select_game = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
+            select_game.sendKeys(Keys.ENTER);
+            Thread.sleep(500);
             //
         } catch(Exception e){
             e.printStackTrace();
