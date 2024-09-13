@@ -67,7 +67,7 @@ public class Prueba extends Main {
             //
             WebElement game = driver.findElement(By.xpath("(//div[@class='card-body py-3'])[4]"));
             game.click();
-            Thread.sleep(2000);
+            Thread.sleep(500);
             WebElement type_game = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
             type_game.sendKeys("Batman Arkham Knight");
             Thread.sleep(500);
@@ -75,6 +75,19 @@ public class Prueba extends Main {
             select_game.sendKeys(Keys.ENTER);
             Thread.sleep(500);
             //
+            WebElement res = driver.findElement(By.xpath("(//div[@class='card-body py-3'])[5]"));
+            res.click();
+            Thread.sleep(500);
+            WebElement type_res = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
+            type_res.sendKeys("QHD");
+            Thread.sleep(500);
+            WebElement select_res = driver.findElement(By.xpath("/html/body/span/span/span[1]/input"));
+            select_res.sendKeys(Keys.ENTER);
+            Thread.sleep(500);
+            //
+            WebElement proceed = driver.findElement(By.xpath("(//button[@class='btn btn-primary btn-block mt-md-3 mt-2'])[1]"));
+            proceed.click();
+            Thread.sleep(3000);
         } catch(Exception e){
             e.printStackTrace();
         } finally{
