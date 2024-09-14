@@ -17,6 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.openqa.selenium.Keys;
+import java.util.Scanner;
 //
 public class Prueba extends Main {
     //
@@ -37,6 +38,11 @@ public class Prueba extends Main {
         WebDriver driver = new ChromeDriver(chromeOptions);
         //
         try{
+            Scanner myObj = new Scanner(System.in);
+            System.out.println("Please enter the 1st GPU:");
+            String gpu1 = myObj.nextLine();
+            System.out.println("The first GPU is: " + gpu1);
+            //
             driver.get("https://pc-builds.com/fps-calculator");
             //
             By cookies_accept = By.xpath("(//p[normalize-space()='Consent'])[1]");
