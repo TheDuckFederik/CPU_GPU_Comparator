@@ -43,6 +43,9 @@ public class Main {
     chromeOptions.addArguments("start-maximized");
     chromeOptions.addArguments("--log-level=1");
     chromeOptions.addArguments("--incognito");
+    chromeOptions.addArguments("--disable-notifications");
+    chromeOptions.addArguments("--disable-search-engine-choice-screen");
+    chromeOptions.setAcceptInsecureCerts(true);
     //chromeOptions.addArguments("--headless");
     driver = new ChromeDriver(chromeOptions);
     wait = new WebDriverWait(driver, 45);

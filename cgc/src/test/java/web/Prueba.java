@@ -5,37 +5,29 @@ package web;
 // import java.time.LocalDate;
 // import org.openqa.selenium.JavascriptExecutor;
 // import org.testng.Assert;
+// import org.openqa.selenium.chrome.ChromeOptions;
+// import org.openqa.selenium.WebDriver;
+// import org.openqa.selenium.chrome.ChromeDriver;
+// import java.util.Scanner;
 import java.io.IOException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.openqa.selenium.Keys;
-import java.util.Scanner;
+
 //
 public class Prueba extends Main {
     //
     @Test(description = "Getting the information for the database.")
-    @Story("Elements")
-    @Description("Rellenar textbox")
+    @Story("Game1")
+    @Description("Gather performance from game 1")
     //
-    public void TC001_Elements1() throws InterruptedException, IOException {
-        testId = "TC001_Elements1";
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("start-maximized");
-        chromeOptions.addArguments("--log-level=1");
-        chromeOptions.addArguments("--disable-notifications");
-        chromeOptions.addArguments("--disable-search-engine-choice-screen");
-        chromeOptions.setAcceptInsecureCerts(true);
-        chromeOptions.addArguments("--incognito");
-        //
-        WebDriver driver = new ChromeDriver(chromeOptions);
+    public void GPU1_Game1() throws InterruptedException, IOException {
+        testId = "GPU1_Game1";
         //
         try{
             // This is suposedly the Java version of the Python "input".
@@ -104,21 +96,11 @@ public class Prueba extends Main {
     }
     //
     @Test(description = "Getting the information for the database.")
-    @Story("Elements")
-    @Description("Rellenar textbox")
+    @Story("Game1")
+    @Description("Gather performance from game 1")
     //
-    public void TC002_Elements1() throws InterruptedException, IOException {
-        testId = "TC002_Elements1";
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("start-maximized");
-        chromeOptions.addArguments("--log-level=1");
-        chromeOptions.addArguments("--disable-notifications");
-        chromeOptions.addArguments("--disable-search-engine-choice-screen");
-        chromeOptions.setAcceptInsecureCerts(true);
-        chromeOptions.addArguments("--incognito");
-        //
-        WebDriver driver = new ChromeDriver(chromeOptions);
-        //
+    public void GPU2_Game1() throws InterruptedException, IOException {
+        testId = "GPU2_Game1";//
         try{
             driver.get("https://pc-builds.com/fps-calculator");
             //
