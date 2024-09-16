@@ -45,10 +45,10 @@ public class Prueba extends Main {
             //
             driver.get("https://pc-builds.com/fps-calculator");
             //
-            By cookies_accept = By.xpath("(//p[normalize-space()='Consent'])[1]");
-            WebDriverWait wait = new WebDriverWait(driver, 1);
-            wait.until(ExpectedConditions.elementToBeClickable(cookies_accept)).click();
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(cookies_accept));
+            // By cookies_accept = By.xpath("(//p[normalize-space()='Consent'])[1]");
+            // WebDriverWait wait = new WebDriverWait(driver, 1);
+            // wait.until(ExpectedConditions.elementToBeClickable(cookies_accept)).click();
+            // wait.until(ExpectedConditions.invisibilityOfElementLocated(cookies_accept));
             Thread.sleep(500);
             //
             WebElement cpu = driver.findElement(By.xpath("//*[@id=\'card_cpu\']/div/div[2]/div[2]/span/span[1]/span/span[2]"));
